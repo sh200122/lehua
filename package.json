@@ -9,6 +9,9 @@
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
   },
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@prismicio/client": "^7.13.0",
