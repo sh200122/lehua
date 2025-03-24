@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 
-export default async function Header({}: Object) {
+export default async function Header({}: object) {
   const client = createClient();
   const settings = await client.getSingle("setting");
   return (
