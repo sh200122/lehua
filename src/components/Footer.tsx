@@ -6,7 +6,7 @@ import { Bounded } from "./Bounded";
 import { FooterPhysics } from "./FooterPhysics";
 import { asImageSrc } from "@prismicio/client";
 
-export default async function Footer({}: object) {
+export default async function Footer() {
   const client = createClient();
   const settings = await client.getSingle("setting");
   const boardTextureURLs = settings.data.footer_skateboards
