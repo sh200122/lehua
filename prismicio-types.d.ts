@@ -377,6 +377,17 @@ interface SkateboardDocumentData {
   >;
 
   /**
+   * Color field in *Skateboard*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skateboard.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  color: prismic.ColorField;
+
+  /**
    * Slice Zone field in *Skateboard*
    *
    * - **Field Type**: Slice Zone

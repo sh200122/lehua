@@ -8,32 +8,6 @@ import { HorizontalLine, VerticalLine } from "@/components/Line";
 import clsx from "clsx";
 import { Scribble } from "./Scribble";
 
-// 获取主色调s
-// async function getDominantColor(url: string) {
-//   try {
-//     const paletteURL = new URL(url);
-//     paletteURL.searchParams.set("palette", "json");
-
-//     const controller = new AbortController();
-//     const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-//     const res = await fetch(paletteURL, {
-//       signal: controller.signal,
-//     });
-//     clearTimeout(timeoutId);
-
-//     const json = await res.json();
-
-//     return (
-//       json.dominant_colors.vibrant?.hex ||
-//       json.dominant_colors.vibrant_light?.hex
-//     );
-//   } catch (error) {
-//     console.error("获取主色调失败:", error);
-//     return "#ff7347"; // 发生错误时返回默认颜色
-//   }
-// }
-
 type Props = {
   id: string;
 };
@@ -52,10 +26,6 @@ export async function SkateboardProduct({ id }: Props) {
     ? `$${(product.data.price / 100).toFixed(2)}`
     : "Price Not Available";
 
-//   const dominantColor = isFilled.image(product.data.image)
-//     ? await getDominantColor(product.data.image.url)
-//     : undefined;
-
   return (
     <div className="group relative mx-auto w-full max-w-72 px-8 pt-4 ">
       <VerticalLine className={clsx(VERTICAL_LINE_CLASSES, "left-4")} />
@@ -71,7 +41,7 @@ export async function SkateboardProduct({ id }: Props) {
       <div className="-mb-1 overflow-hidden py-4">
         <Scribble
           className="absolute inset-0 h-full w-full"
-          color="#ff7347"
+          color={product.data.color?.toString()}
         />
         <PrismicNextImage
           alt=""
