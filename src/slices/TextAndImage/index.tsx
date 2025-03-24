@@ -5,7 +5,6 @@ import {
   PrismicText,
   SliceComponentProps,
 } from "@prismicio/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { Bounded } from "@/components/Bounded";
 import clsx from "clsx";
 import { Heading } from "@/components/Heading";
@@ -21,22 +20,24 @@ export type TextAndImageProps = SliceComponentProps<Content.TextAndImageSlice>;
 /**
  * Component for "TextAndImage" Slices.
  */
-const TextAndImage: FC<TextAndImageProps> = ({ slice,index }) => {
+const TextAndImage: FC<TextAndImageProps> = ({ slice, index }) => {
   const theme = slice.primary.theme;
   return (
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={clsx(
-        'sticky top-[calc(var(--index)*2rem)]',
+        "sticky top-[calc(var(--index)*2rem)]",
         theme === "Blue" && "bg-texture bg-brand-blue text-white",
         theme === "Orange" && "bg-texture bg-brand-orange text-white",
         theme === "Navy" && "bg-texture bg-brand-navy text-white",
         theme === "Lime" && "bg-texture bg-brand-lime"
       )}
-      style={{
-        '--index': index,
-      } as React.CSSProperties}
+      style={
+        {
+          "--index": index,
+        } as React.CSSProperties
+      }
     >
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-24">
         <div
@@ -59,7 +60,7 @@ const TextAndImage: FC<TextAndImageProps> = ({ slice,index }) => {
             <ButtonLink
               field={slice.primary.button}
               color={theme === "Lime" ? "orange" : "lime"}
-          >
+            >
               {slice.primary.button.text}
             </ButtonLink>
           </SlideIn>
