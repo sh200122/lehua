@@ -1,6 +1,4 @@
-import { SVGProps } from "react";
-
-export function Logo(props: SVGProps<SVGSVGElement>) {
+export function Logo() {
   return (
     <svg
       width="175"

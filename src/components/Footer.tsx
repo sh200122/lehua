@@ -1,7 +1,6 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import React from "react";
-import { Logo } from "./Logo";
 import { Bounded } from "./Bounded";
 import { FooterPhysics } from "./FooterPhysics";
 import { asImageSrc } from "@prismicio/client";
