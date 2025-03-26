@@ -14,7 +14,7 @@ export default function Loading() {
         progress >= 100 ? "pointer-events-none opacity-0" : "opacity-100"
       )}
     >
-      <Logo className="w-[15vw] animate-squiggle text-brand-pink" />
+      <Logo />
       <p className="w-full animate-squiggle content-center text-center leading-none text-brand-lime">
         LOADING...
       </p>
