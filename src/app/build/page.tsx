@@ -60,7 +60,7 @@ export default async function Page(props: {
           </div>
 
           <Link href="/" className="absolute left-6 top-6">
-            <Logo className="h-12 text-white" />
+            <Logo />
           </Link>
         </div>
         <div className="grow bg-texture bg-zinc-900 text-white ~p-4/6 lg:w-96 lg:shrink-0 lg:grow-0">
